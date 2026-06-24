@@ -1,0 +1,41 @@
+# ============================================================
+# PIE – Pediatric Insight Engine
+# Requirements File
+# ============================================================
+
+# Core data science
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Machine learning
+scikit-learn>=1.3.0
+shap>=0.42.0
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.1
+
+# Computer vision / pose estimation
+mediapipe>=0.10.0
+opencv-python>=4.8.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Dashboard UI
+streamlit>=1.28.0
+streamlit-extras>=0.3.0
+
+# Utilities
+tqdm>=4.65.0
+joblib>=1.3.0
+python-dateutil>=2.8.2
+
+# Optional: CHILDES data access (if available)
+# childespy>=0.1.0   # Uncomment if childespy is pip-installable
+
+# Note: childespy requires R + childes-db connection.
+# This project simulates CHILDES data when the library is unavailable.

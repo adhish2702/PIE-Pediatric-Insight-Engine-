@@ -1,0 +1,97 @@
+<mxfile>
+  <diagram name="PIE Architecture (Publication)">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- STAGE 1: INPUT -->
+        <mxCell value="Stage I: Data Acquisition" style="text;html=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="200" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="childes" value="Speech &amp; Language Data&#xa;(CHILDES)" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="180" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="video" value="Video Input&#xa;(Child Behavior)" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="180" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- STAGE 2: FEATURE EXTRACTION -->
+        <mxCell value="Stage II: Feature Extraction" style="text;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="250" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="speech" value="Speech Processing&#xa;- Acoustic Features (Pitch, Energy)&#xa;- Linguistic Features (MLU, Vocabulary, Turn-taking)" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="280" y="60" width="260" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="motor" value="Motor Processing&#xa;- Pose Estimation (MediaPipe)&#xa;- Velocity, Symmetry, Variability" style="rounded=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="260" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- STAGE 3: FUSION -->
+        <mxCell value="Stage III: Multimodal Fusion" style="text;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="20" width="250" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fusion" value="Late Fusion Model&#xa;- Independent Models (Speech &amp; Motor)&#xa;- Weighted Aggregation / Meta-Classifier" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="580" y="130" width="260" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- STAGE 4: TEMPORAL -->
+        <mxCell value="Stage IV: Temporal Modeling" style="text;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="20" width="250" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="temporal" value="Developmental Velocity Engine&#xa;- Time-Series Analysis&#xa;- Micro-Deviation Detection (Trend &amp; Z-score)" style="rounded=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="880" y="130" width="260" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- STAGE 5: XAI + OUTPUT -->
+        <mxCell value="Stage V: Explainability &amp; Output" style="text;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="20" width="250" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="xai" value="Explainable AI&#xa;- Feature Importance (SHAP)&#xa;- Reasoning Tags" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="80" width="260" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="output" value="Clinical Output Dashboard&#xa;- Risk Score&#xa;- Developmental Trends&#xa;- Behavioral Insights" style="rounded=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="200" width="260" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES -->
+        <mxCell edge="1" parent="1" source="childes" target="speech">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="video" target="motor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="speech" target="fusion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="motor" target="fusion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="fusion" target="temporal">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="temporal" target="xai">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" parent="1" source="temporal" target="output">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
