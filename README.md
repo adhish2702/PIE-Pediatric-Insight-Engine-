@@ -8,5 +8,5 @@ PIE is a software-only, multimodal AI framework designed to model developmental 
 * **Edge-Privacy Architecture:** Processes sensitive data securely at the edge, ensuring patient privacy is maintained without compromising model performance.
 * **Research-Driven Design:** Architected to support technical documentation, academic review, and future clinical software implementation. 
 
-## 🛠️ Tech Stack & Methodology
+## Tech Stack & Methodology
 This project heavily relies on Python-based machine learning frameworks and custom transformer architectures tailored for time-series and multimodal inputs.
